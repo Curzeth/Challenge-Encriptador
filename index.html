@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Workbench&display=swap" rel="stylesheet">
+        <title>Encriptador/Desencriptador</title>
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo3d">
+                <video width="30%" height="auto" loop muted autoplay playsinline>
+                    <source src="media/3D Logo.webm" type="video/webm">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+            <div class="titulo">
+                <h1>Encriptador y Desencriptador de Texto</h1>
+            </div>
+        </header>
+
+        <div class="contenedor">
+            <div class="columna">
+                <div>
+                    <textarea id="textoEntrada" placeholder="Ingresa el texto aquí" class="caja-texto"></textarea>
+                </div>
+                <div class="botones">
+                    <button id="botonEncriptar">Encriptar</button>
+                    <button id="botonDesencriptar">Desencriptar</button>
+                </div>
+                <div>
+                    <ul class="requisitos">
+                        <li>⚠️ Importante</li>
+                        <li>❌ Sólo letras minúsculas</li>
+                        <li>❌ No usar letras con acentos</li>
+                        <li>❌ No usar caracteres especiales</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="columna">
+                <div class="img-container">
+                    <img src="media/question-mark.png" alt="Signo de interrogación">
+                </div>
+                <div class="resultadoTextos">
+                    <h2 id="resultadoTitulo">No se encontró ningún mensaje</h2>
+                    <p id="resultadoTexto">Ingresa un texto, por favor.</p>
+                    <button id="botonCopiar">Copiar</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="logo">
+                <img src="media/Logo White.png" alt="Logo">
+            </div>
+            <div class="copy">
+                <p>&copy; Copyright Curzeth - 2024</p>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
