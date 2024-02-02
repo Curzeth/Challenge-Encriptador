@@ -52,28 +52,38 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function validarTexto(texto) {
-        return /^[a-z]+$/.test(texto);
+        return /^[a-z\s]+$/.test(texto);
     }
 
     function ocultarImagen() {
         imagenInterrogacion.style.display = 'none';
     }
+
+    function encriptar(texto) {
+        return texto
+            .split(' ')
+            .map(function (palabra) {
+                return palabra
+                    .replace(/e/g, 'enter')
+                    .replace(/i/g, 'imes')
+                    .replace(/a/g, 'ai')
+                    .replace(/o/g, 'ober')
+                    .replace(/u/g, 'ufat');
+            })
+            .join(' ');
+    }
+
+    function desencriptar(texto) {
+        return texto
+            .split(' ')
+            .map(function (palabra) {
+                return palabra
+                    .replace(/enter/g, 'e')
+                    .replace(/imes/g, 'i')
+                    .replace(/ai/g, 'a')
+                    .replace(/ober/g, 'o')
+                    .replace(/ufat/g, 'u');
+            })
+            .join(' ');
+    }
 });
-
-function encriptar(texto) {
-    return texto
-        .replace(/e/g, 'enter')
-        .replace(/i/g, 'imes')
-        .replace(/a/g, 'ai')
-        .replace(/o/g, 'ober')
-        .replace(/u/g, 'ufat');
-}
-
-function desencriptar(texto) {
-    return texto
-        .replace(/enter/g, 'e')
-        .replace(/imes/g, 'i')
-        .replace(/ai/g, 'a')
-        .replace(/ober/g, 'o')
-        .replace(/ufat/g, 'u');
-}
