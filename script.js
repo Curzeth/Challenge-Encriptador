@@ -78,13 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
             .split(' ')
             .map(function (palabra) {
                 return palabra
-                    .replace(/\benter\b/g, 'e')
-                    .replace(/\bimes\b/g, 'i')
-                    .replace(/\bai\b/g, 'a')
-                    .replace(/\bober\b/g, 'o')
-                    .replace(/\bufat\b/g, 'u');
+                    .replace(/enter/g, 'e')
+                    .replace(/imes/g, 'i')
+                    .replace(/ai/g, 'a')
+                    .replace(/ober/g, 'o')
+                    .replace(/ufat/g, 'u');
             })
             .join(' ');
     }
-    
 });
